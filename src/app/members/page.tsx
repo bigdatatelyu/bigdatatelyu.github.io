@@ -22,9 +22,9 @@ export default function page({}: Props) {
         <>
           <section
             key={era.year}
-            className="background-topography flex flex-col items-center justify-center py-6"
+            className="background-polkadot flex flex-col items-center justify-center pb-6 pt-8"
           >
-            <h2 className="mb-6 bg-gradient-to-r from-emerald-500 to-sky-500 bg-clip-text text-4xl font-extrabold text-transparent">
+            <h2 className="mb-4 bg-gradient-to-r from-emerald-500 to-sky-500 bg-clip-text text-4xl font-extrabold text-transparent">
               {era.year} Era
             </h2>
 
