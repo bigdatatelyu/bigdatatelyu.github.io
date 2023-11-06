@@ -8,8 +8,8 @@ type Props = {};
 
 export default function page({}: Props) {
   return (
-    <main className="mt-40">
-      <section className="container mx-auto mb-28 mt-32 md:px-32">
+    <main>
+      <section className="container mx-auto mb-28 mt-40 md:px-32">
         <h1 className="text-5xl font-extrabold">Members</h1>
         <h3 className="mt-3 text-lg font-medium text-slate-800 dark:text-slate-300/80">
           Our mission is to <strong>harmonize</strong> every moment, upholding{' '}
