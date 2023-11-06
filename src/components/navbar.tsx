@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -7,7 +8,6 @@ import { twMerge } from 'tailwind-merge';
 
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
-import Image from 'next/image';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -37,6 +37,7 @@ export default function Navbar() {
           </div>
         </Link>
 
+        {/* mobile navigation */}
         <section className="flex gap-2 lg:hidden">
           <ModeToggle />
           <Button
@@ -121,7 +122,8 @@ export default function Navbar() {
           </div>
         </section>
 
-        <div className="hidden gap-6 lg:flex">
+        {/* desktop navigation */}
+        <div className="hidden items-center gap-6 lg:flex">
           <Link
             href="/"
             className={twMerge(baseStyle, pathname === '/' ? activeStyle : '')}

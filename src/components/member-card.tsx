@@ -48,7 +48,7 @@ export default function MemberCard({ personnel }: Props) {
           height={120}
           className="mb-2 rounded-full dark:brightness-75"
         />
-        <h1 className="text-center text-xl font-bold dark:text-slate-300/90">
+        <h1 className="px-2 text-center text-xl font-bold dark:text-slate-300/90">
           {personnel.name}
         </h1>
         <h3 className="text-sm font-bold text-emerald-500">
