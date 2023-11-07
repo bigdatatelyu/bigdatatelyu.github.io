@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
+import routes from '@/data/routes';
+
 import { ModeToggle } from './mode-toggle';
 import { Button } from './ui/button';
 
@@ -94,69 +96,38 @@ export default function Navbar() {
               </Button>
             </div>
             <ul className="flex min-h-[250px] flex-col items-center justify-center gap-8">
-              <li>
-                <a
-                  href="/"
-                  className={twMerge(
-                    baseStyle,
-                    'py-0',
-                    pathname === '/' ? activeStyle : ''
-                  )}
-                >
-                  home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/projects"
-                  className={twMerge(
-                    baseStyle,
-                    'py-0',
-                    pathname === '/projects' ? activeStyle : ''
-                  )}
-                >
-                  projects
-                </a>
-              </li>
+              {routes.map((route) => (
+                <li key={route.name}>
+                  <a
+                    href={route.path}
+                    className={twMerge(
+                      baseStyle,
+                      'py-0',
+                      pathname === route.path ? activeStyle : ''
+                    )}
+                  >
+                    {route.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
 
         {/* desktop navigation */}
         <div className="hidden items-center gap-6 lg:flex">
-          <Link
-            href="/"
-            className={twMerge(baseStyle, pathname === '/' ? activeStyle : '')}
-          >
-            home
-          </Link>
-          <Link
-            href="/about"
-            className={twMerge(
-              baseStyle,
-              pathname === '/about' ? activeStyle : ''
-            )}
-          >
-            about
-          </Link>
-          <Link
-            href="/researches"
-            className={twMerge(
-              baseStyle,
-              pathname === '/researches' ? activeStyle : ''
-            )}
-          >
-            researches
-          </Link>
-          <Link
-            href="/members"
-            className={twMerge(
-              baseStyle,
-              pathname === '/members' ? activeStyle : ''
-            )}
-          >
-            our teams
-          </Link>
+          {routes.map((route) => (
+            <Link
+              key={route.name}
+              href={route.path}
+              className={twMerge(
+                baseStyle,
+                pathname === route.path ? activeStyle : ''
+              )}
+            >
+              {route.name}
+            </Link>
+          ))}
           <div className="py-6">
             <ModeToggle />
           </div>
