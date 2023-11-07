@@ -44,7 +44,7 @@ export default function Navbar() {
           <ModeToggle />
           <Button
             variant="outline"
-            className="space-y-2 bg-white/50 dark:bg-slate-800/50"
+            className="space-y-2 bg-white/50 dark:border-gray-700/60 dark:bg-gray-800/50"
             onClick={() => setIsNavOpen((prev) => !prev)}
             name="menu"
           >
@@ -68,14 +68,14 @@ export default function Navbar() {
             // eslint-disable-next-line tailwindcss/no-custom-classname
             className={
               isNavOpen
-                ? 'showMenuNav bg-white dark:bg-slate-900'
+                ? 'showMenuNav bg-white dark:bg-gray-800'
                 : 'hideMenuNav'
             }
           >
             <div className="absolute right-0 top-0">
               <Button
                 variant="outline"
-                className="mr-8 mt-5"
+                className="mr-8 mt-5 bg-white/50 dark:border-gray-700/60 dark:bg-gray-800/50"
                 onClick={() => setIsNavOpen(false)}
                 name="close"
               >

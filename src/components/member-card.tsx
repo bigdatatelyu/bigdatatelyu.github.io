@@ -1,6 +1,11 @@
 'use client';
 
-import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useSpring,
+} from 'framer-motion';
 import Image from 'next/image';
 
 import { Personnel } from '@/data/our-teams/types';
@@ -25,7 +30,7 @@ export default function MemberCard({ personnel }: Props) {
   return (
     <div
       onMouseMove={onMouseMove}
-      className="group relative overflow-hidden rounded-lg border border-slate-200 py-6 dark:border-slate-700 md:gap-8"
+      className="group relative overflow-hidden rounded-lg border border-slate-200 py-6 transition-all hover:border-emerald-500 dark:border-slate-700 md:gap-8"
     >
       <div className="pointer-events-none">
         <div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
