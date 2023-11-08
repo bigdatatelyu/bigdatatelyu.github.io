@@ -1,11 +1,3 @@
-'use client';
-
-import {
-  motion,
-  useMotionTemplate,
-  useMotionValue,
-  useSpring,
-} from 'framer-motion';
 import Image from 'next/image';
 
 import { Personnel } from '@/data/our-teams/types';
@@ -16,36 +8,10 @@ type Props = {
 };
 
 export default function MemberCard({ personnel }: Props) {
-  const mouseX = useSpring(0, { stiffness: 500, damping: 100 });
-  const mouseY = useSpring(0, { stiffness: 500, damping: 100 });
-
-  function onMouseMove({ currentTarget, clientX, clientY }: any) {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
-  const maskImage = useMotionTemplate`radial-gradient(240px at ${mouseX}px ${mouseY}px, white, transparent)`;
-  const style = { maskImage, WebkitMaskImage: maskImage };
-
   return (
-    <div
-      onMouseMove={onMouseMove}
-      className="group relative overflow-hidden rounded-lg border border-slate-200 py-6 transition-all hover:border-emerald-500 dark:border-slate-700 md:gap-8"
-    >
-      <div className="pointer-events-none">
-        <div className="absolute inset-0 z-0  transition duration-1000 [mask-image:linear-gradient(black,transparent)]" />
-        <motion.div
-          className="absolute inset-0 z-10  bg-gradient-to-br via-zinc-100/10  opacity-100  transition duration-1000 group-hover:opacity-50 "
-          style={style}
-        />
-        <motion.div
-          className="absolute inset-0 z-10 opacity-0 mix-blend-overlay transition duration-1000 group-hover:opacity-100"
-          style={style}
-        />
-      </div>
-
+    <div className="group relative overflow-hidden rounded-lg border border-slate-200 py-6 transition-all dark:border-slate-700 md:gap-8">
       {/* children */}
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center">
         <Image
           src={personnel.image}
           alt={personnel.name}
