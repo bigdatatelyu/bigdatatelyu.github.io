@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={cn(
           jakarta.className,
-          'flex flex-col min-h-screen dark:bg-gray-800'
+          'flex flex-col min-h-screen dark:bg-slate-800'
         )}
       >
         <ThemeProvider

@@ -20,7 +20,7 @@ export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-sm dark:bg-gray-800/90">
+    <nav className="fixed top-0 z-50 w-full bg-white/80 backdrop-blur-sm dark:bg-slate-800/90">
       <div className="container mx-auto flex items-center justify-between md:px-32">
         <Link href="/" className="flex gap-2 py-6 text-2xl font-bold">
           <Image
