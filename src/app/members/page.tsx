@@ -28,7 +28,7 @@ export default function page({}: Props) {
               {era.year} Era
             </h2>
 
-            <div className="flex w-screen flex-row justify-between gap-4 overflow-x-hidden py-8">
+            <div className="flex w-screen flex-row justify-between gap-5 overflow-x-hidden py-8 sm:gap-8">
               {era.images.map((image, index) => (
                 <Image
                   key={index}
@@ -38,7 +38,7 @@ export default function page({}: Props) {
                   height={224}
                   className={cn(
                     index === 2 ? 'rotate-2' : '-rotate-2',
-                    'rounded-lg shadow-lg dark:brightness-75 w-80 h-67'
+                    'rounded-lg shadow-lg dark:brightness-75 aspect-[4/3] w-52 lg:w-80'
                   )}
                 />
               ))}
