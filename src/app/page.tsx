@@ -11,7 +11,7 @@ export default function Home() {
         </span>
       </h1>
       <h3 className="text-center text-lg font-medium text-slate-800/60 dark:text-slate-200/70">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Telkom University, Bandung, Indonesia
       </h3>
     </main>
   );
