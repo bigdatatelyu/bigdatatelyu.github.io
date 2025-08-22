@@ -46,11 +46,11 @@ export default function CallToAction() {
       >
         <motion.div whileHover={{ scale: 1.05 }}>
           <a
-            href="https://instagram.com/bigdata.lab" // ganti dengan akun IG kamu
+            href="https://instagram.com/bigdata.lab" 
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 dark:from-emerald-400 dark:to-green-500">
+            <Button className="mb-20 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 dark:from-emerald-400 dark:to-green-500">
               Hubungi Kami
             </Button>
           </a>
