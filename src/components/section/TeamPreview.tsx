@@ -2,18 +2,10 @@
 
 import MemberCard from "@/components/member-card";
 import { members } from "@/data/our-teams";
+import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "../ui/button";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
-  }),
-};
 
 export default function TeamPreview() {
   const latestEra = members[0];
