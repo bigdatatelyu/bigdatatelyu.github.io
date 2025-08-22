@@ -28,10 +28,10 @@ const routes: Route[] = [
     path: "/gallery",
     name: "Gallery",
   },
-  {
-    path: "/contact",
-    name: "Contact",
-  },
+  // {
+  //   path: "/contact",
+  //   name: "Contact",
+  // },
 ];
 
 export default routes;

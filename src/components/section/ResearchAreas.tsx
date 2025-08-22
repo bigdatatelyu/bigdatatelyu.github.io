@@ -79,7 +79,7 @@ export default function ResearchAreas() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-12 bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-center text-3xl font-extrabold text-transparent md:text-4xl"
+        className="mb-12 bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-center text-3xl font-extrabold leading-tight text-transparent md:text-4xl"
       >
         Bidang Riset & Keahlian
       </motion.h2>
@@ -109,7 +109,7 @@ export default function ResearchAreas() {
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
                   <Icon className="h-10 w-10 text-emerald-400" />
                 </div>
-                <p className="mt-4 font-semibold text-slate-800 dark:text-green-100">
+                <p className="mt-4 pb-1 font-semibold leading-snug text-slate-800 dark:text-green-100">
                   {title}
                 </p>
               </Card>
