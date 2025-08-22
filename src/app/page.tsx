@@ -1,7 +1,6 @@
 import AboutPreview from "@/components/section/AboutPreview";
 import ActivitiesHighlight from "@/components/section/ActivitesHighlight";
 import CallToAction from "@/components/section/CallToAction";
-import Footer from "@/components/section/Footer";
 import HeroSection from "@/components/section/HeroSection";
 import Partners from "@/components/section/Partners";
 import ProjectsShowcase from "@/components/section/ProjectShowcase";
@@ -19,7 +18,6 @@ export default function HomePage() {
       <TeamPreview />
       <Partners />
       <CallToAction />
-      <Footer />
     </main>
   );
 }

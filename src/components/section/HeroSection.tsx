@@ -86,15 +86,15 @@ export default function HeroSection() {
             Learn More
           </motion.button>
 
-          {/* Tombol Contact */}
-          <motion.button
+          {/* Tombol Join Us */}
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={scrollToFooter}
+            href="/recruitment"
             className="rounded-xl border border-green-400 px-6 py-3 text-green-600 transition hover:bg-green-50 dark:text-green-300 dark:hover:bg-green-900/30"
           >
-            Contact Us
-          </motion.button>
+            Join Us
+          </motion.a>
         </motion.div>
       </div>
 

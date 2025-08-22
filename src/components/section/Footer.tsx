@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -29,14 +30,33 @@ export default function Footer() {
         >
           <h3 className="text-lg font-bold text-green-400">Kontak</h3>
           <ul className="mt-3 space-y-2 text-sm">
-            <li className="flex items-center gap-2 text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300">
-              <Mail className="h-4 w-4" /> bigdata@telkomuniversity.ac.id
+            <li>
+              <a
+                href="mailto:bigdata@telkomuniversity.ac.id"
+                className="flex items-center gap-2 text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                <Mail className="h-4 w-4" /> bigdata@telkomuniversity.ac.id
+              </a>
             </li>
-            <li className="flex items-center gap-2 text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300">
-              <Instagram className="h-4 w-4" /> @bigdata.lab
+            <li>
+              <a
+                href="https://instagram.com/bigdata.lab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                <Instagram className="h-4 w-4" /> @bigdata.lab
+              </a>
             </li>
-            <li className="flex items-center gap-2 text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300">
-              <MapPin className="h-4 w-4" /> Jl. Telekomunikasi No.1 Bandung
+            <li>
+              <a
+                href="https://maps.google.com/?q=Jl.+Telekomunikasi+No.1+Bandung"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                <MapPin className="h-4 w-4" /> Jl. Telekomunikasi No.1 Bandung
+              </a>
             </li>
           </ul>
         </motion.div>
@@ -50,16 +70,38 @@ export default function Footer() {
         >
           <h3 className="text-lg font-bold text-green-400">Quick Links</h3>
           <ul className="mt-3 space-y-2 text-sm">
-            {["About", "Research", "Activities", "Contact"].map((link) => (
-              <li key={link}>
-                <a
-                  href={`#${link.toLowerCase()}`}
-                  className="text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/about"
+                className="text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/research"
+                className="text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                Research
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/activities"
+                className="text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                Activities
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/recruitment"
+                className="text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
+              >
+                Recruitment
+              </Link>
+            </li>
           </ul>
         </motion.div>
       </div>

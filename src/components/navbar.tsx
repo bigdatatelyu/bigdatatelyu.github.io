@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { twMerge } from 'tailwind-merge';
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 
-import routes from '@/data/routes';
+import routes from "@/data/routes";
 
-import { ModeToggle } from './mode-toggle';
-import { Button } from './ui/button';
+import { ModeToggle } from "./mode-toggle";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const pathname = usePathname();
   const baseStyle =
-    'flex items-center py-6 font-semibold transition-colors hover:text-emerald-500';
-  const activeStyle = 'text-emerald-500';
+    "flex items-center py-6 font-semibold transition-colors hover:text-emerald-500";
+  const activeStyle = "text-emerald-500";
 
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -65,11 +65,10 @@ export default function Navbar() {
           </Button>
 
           <div
-            // eslint-disable-next-line tailwindcss/no-custom-classname
             className={
               isNavOpen
-                ? 'showMenuNav bg-white dark:bg-gray-800'
-                : 'hideMenuNav'
+                ? "showMenuNav bg-white dark:bg-gray-800"
+                : "hideMenuNav"
             }
           >
             <div className="absolute right-0 top-0">
@@ -102,14 +101,22 @@ export default function Navbar() {
                     href={route.path}
                     className={twMerge(
                       baseStyle,
-                      'py-0',
-                      pathname === route.path ? activeStyle : ''
+                      "py-0",
+                      pathname === route.path ? activeStyle : ""
                     )}
                   >
                     {route.name}
                   </a>
                 </li>
               ))}
+              {/* ✅ Join Us button for mobile */}
+              <li>
+                <Link href="/recruitment">
+                  <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-md transition hover:scale-105 hover:shadow-lg">
+                    Join Us
+                  </Button>
+                </Link>
+              </li>
             </ul>
           </div>
         </section>
@@ -122,12 +129,18 @@ export default function Navbar() {
               href={route.path}
               className={twMerge(
                 baseStyle,
-                pathname === route.path ? activeStyle : ''
+                pathname === route.path ? activeStyle : ""
               )}
             >
               {route.name}
             </Link>
           ))}
+          {/* ✅ Join Us button for desktop */}
+          <Link href="/recruitment">
+            <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 text-white shadow-md transition hover:scale-105 hover:shadow-lg">
+              Join Us
+            </Button>
+          </Link>
           <div className="py-6">
             <ModeToggle />
           </div>
