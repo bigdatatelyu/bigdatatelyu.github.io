@@ -6,31 +6,31 @@ type Route = {
 const routes: Route[] = [
   {
     path: "/",
-    name: "home",
+    name: "Home",
   },
   {
     path: "/about",
-    name: "about",
+    name: "About",
   },
   {
     path: "/research",
-    name: "research",
+    name: "Research",
   },
   {
     path: "/activities",
-    name: "activities",
+    name: "Activities",
   },
   {
     path: "/team",
-    name: "team",
+    name: "Team",
   },
   {
     path: "/gallery",
-    name: "gallery",
+    name: "Gallery",
   },
   {
     path: "/contact",
-    name: "contact",
+    name: "Contact",
   },
 ];
 
