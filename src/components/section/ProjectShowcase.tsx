@@ -32,7 +32,7 @@ export default function ProjectsShowcase() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-center text-3xl font-extrabold text-transparent md:text-4xl"
+        className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-center text-3xl font-extrabold leading-tight text-transparent md:text-4xl"
       >
         Proyek Unggulan
       </motion.h2>
@@ -50,10 +50,10 @@ export default function ProjectsShowcase() {
           >
             <Card className="group flex h-full flex-col justify-between rounded-2xl border border-slate-700/40 bg-white/5 shadow-md backdrop-blur-sm transition hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/20 dark:bg-slate-900/40">
               <CardContent className="flex h-full flex-col p-6">
-                <h3 className="text-xl font-semibold text-slate-800 transition group-hover:text-emerald-400 dark:text-green-100">
+                <h3 className="pb-1 text-xl font-semibold leading-snug text-slate-800 transition group-hover:text-emerald-400 dark:text-green-100">
                   {p.title}
                 </h3>
-                <p className="mt-3 grow text-slate-600 dark:text-green-200">
+                <p className="mt-3 grow leading-relaxed text-slate-600 dark:text-green-200">
                   {p.desc}
                 </p>
               </CardContent>

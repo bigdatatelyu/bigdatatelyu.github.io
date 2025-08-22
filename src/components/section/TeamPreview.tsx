@@ -33,9 +33,19 @@ export default function TeamPreview() {
           viewport={{ once: true }}
           custom={1}
         >
-          Temui <strong>anggota terbaik kami</strong> yang menjunjung tinggi{" "}
-          <strong>integritas</strong> serta membangun budaya{" "}
-          <strong>keunggulan</strong> bersama.
+          Temui{" "}
+          <strong className="text-emerald-500 dark:text-emerald-400">
+            anggota terbaik kami
+          </strong>{" "}
+          yang menjunjung tinggi{" "}
+          <strong className="text-emerald-500 dark:text-emerald-400">
+            integritas
+          </strong>{" "}
+          serta membangun budaya{" "}
+          <strong className="text-emerald-500 dark:text-emerald-400">
+            keunggulan
+          </strong>{" "}
+          bersama.
         </motion.h3>
       </div>
 

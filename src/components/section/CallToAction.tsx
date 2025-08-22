@@ -12,7 +12,7 @@ export default function CallToAction() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-3xl font-extrabold text-transparent md:text-4xl"
+        className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-3xl font-extrabold leading-tight text-transparent md:text-4xl"
       >
         Ingin Berkolaborasi?
       </motion.h2>
@@ -44,7 +44,7 @@ export default function CallToAction() {
         viewport={{ once: true }}
         className="mt-6"
       >
-        <motion.div whileHover={{ scale: 1.00 }}>
+        <motion.div whileHover={{ scale: 1.0 }}>
           <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-3  text-white shadow-lg transition hover:scale-105 dark:from-emerald-400 dark:to-green-500">
             Hubungi Kami
           </Button>

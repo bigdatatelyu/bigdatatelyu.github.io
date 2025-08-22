@@ -17,7 +17,7 @@ export default function AboutPreview() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeUp}
-        className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-3xl font-extrabold text-transparent md:text-4xl"
+        className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-3xl font-extrabold leading-tight text-transparent md:text-4xl"
       >
         Tentang Lab
       </motion.h2>
