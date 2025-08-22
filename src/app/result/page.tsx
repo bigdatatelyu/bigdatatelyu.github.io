@@ -1,10 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import { fadeUp } from "@/lib/motionVariants";
-import { useSearchParams, useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { CheckCircle2, XCircle } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function ResultPage() {
   const searchParams = useSearchParams();
@@ -31,10 +31,14 @@ export default function ResultPage() {
             initial="hidden"
             animate="visible"
             custom={1}
-            className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            className="text-4xl font-extrabold md:text-5xl"
           >
-            Selamat 🎉
+            <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">
+              Selamat
+            </span>{" "}
+            🎉
           </motion.h1>
+
           <motion.p
             variants={fadeUp}
             initial="hidden"
@@ -43,7 +47,7 @@ export default function ResultPage() {
             className="mt-4 text-lg text-slate-600 dark:text-slate-300"
           >
             NIM <span className="font-semibold">{nim}</span> dinyatakan{" "}
-            <span className="text-emerald-500 font-bold">LULUS</span> seleksi!
+            <span className="font-bold text-emerald-500">LULUS</span> seleksi!
             Bergabunglah dengan grup WhatsApp resmi untuk informasi selanjutnya.
           </motion.p>
           <motion.div
@@ -73,17 +77,21 @@ export default function ResultPage() {
             custom={0}
             className="mb-6"
           >
-            <XCircle className="mx-auto h-24 w-24 text-red-500" />
+            <XCircle className="mx-auto h-24 w-24 text-rose-500" />
           </motion.div>
           <motion.h1
             variants={fadeUp}
             initial="hidden"
             animate="visible"
             custom={1}
-            className="bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            className="text-4xl font-extrabold md:text-5xl"
           >
-            Nice Try 🙏
+            <span className="bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-transparent">
+              Nice Try
+            </span>{" "}
+            🙏
           </motion.h1>
+
           <motion.p
             variants={fadeUp}
             initial="hidden"
@@ -103,7 +111,7 @@ export default function ResultPage() {
           >
             <Button
               onClick={() => router.push("/recruitment")}
-              className="rounded-xl bg-gradient-to-r from-slate-400 to-slate-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+              className="rounded-xl bg-gradient-to-r from-rose-500 to-red-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 hover:shadow-xl"
             >
               Kembali
             </Button>
