@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react"; // ✅ icon panah
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -19,52 +19,68 @@ const recruitmentResults: Record<string, "accepted" | "rejected" | "notfound"> =
 
 export default function RecruitmentPage() {
   const [nim, setNim] = useState("");
+  const [isToastVisible, setIsToastVisible] = useState(false);
   const router = useRouter();
+
+  const showToast = (fn: () => void) => {
+    if (isToastVisible) return;
+    setIsToastVisible(true);
+    fn();
+    setTimeout(() => setIsToastVisible(false), 2500); // ⏳ reset setelah 2.5s
+  };
 
   const handleSearch = () => {
     if (!nim.trim()) {
-      toast.error("Silakan masukkan NIM terlebih dahulu.", {
-        position: "top-right",
-        style: {
-          background: "#fee2e2", // merah muda
-          color: "#b91c1c",
-          fontWeight: 600,
-        },
-      });
+      showToast(() =>
+        toast.error("Silakan masukkan NIM terlebih dahulu.", {
+          position: "top-right",
+          style: {
+            background: "#fee2e2",
+            color: "#b91c1c",
+            fontWeight: 600,
+          },
+        })
+      );
       return;
     }
 
     const result = recruitmentResults[nim];
 
     if (result === "accepted") {
-      toast.success(`Selamat! NIM ${nim} dinyatakan LULUS seleksi.`, {
-        position: "top-right",
-        style: {
-          background: "#dcfce7",
-          color: "#166534",
-          fontWeight: 600,
-        },
-      });
+      showToast(() =>
+        toast.success(`Selamat! NIM ${nim} dinyatakan LULUS seleksi.`, {
+          position: "top-right",
+          style: {
+            background: "#dcfce7",
+            color: "#166534",
+            fontWeight: 600,
+          },
+        })
+      );
       router.push(`/result?status=accepted&nim=${nim}`);
     } else if (result === "rejected") {
-      toast.error(`Mohon maaf, NIM ${nim} dinyatakan TIDAK LULUS.`, {
-        position: "top-right",
-        style: {
-          background: "#fee2e2",
-          color: "#b91c1c",
-          fontWeight: 600,
-        },
-      });
+      showToast(() =>
+        toast.error(`Mohon maaf, NIM ${nim} dinyatakan TIDAK LULUS.`, {
+          position: "top-right",
+          style: {
+            background: "#fee2e2",
+            color: "#b91c1c",
+            fontWeight: 600,
+          },
+        })
+      );
       router.push(`/result?status=rejected&nim=${nim}`);
     } else {
-      toast.warning(`NIM ${nim} tidak ditemukan.`, {
-        position: "top-right",
-        style: {
-          background: "#fef9c3",
-          color: "#854d0e",
-          fontWeight: 600,
-        },
-      });
+      showToast(() =>
+        toast.warning(`NIM ${nim} tidak ditemukan.`, {
+          position: "top-right",
+          style: {
+            background: "#fef9c3",
+            color: "#854d0e",
+            fontWeight: 600,
+          },
+        })
+      );
     }
   };
 
@@ -152,7 +168,8 @@ export default function RecruitmentPage() {
           />
           <Button
             onClick={handleSearch}
-            className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 text-white shadow-md transition hover:scale-105 hover:shadow-xl dark:from-emerald-400 dark:to-green-500"
+            disabled={isToastVisible}
+            className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 text-white shadow-md transition hover:scale-105 hover:shadow-xl disabled:opacity-50 dark:from-emerald-400 dark:to-green-500"
           >
             Cari
           </Button>
