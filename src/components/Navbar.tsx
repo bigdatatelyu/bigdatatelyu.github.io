@@ -39,7 +39,6 @@ export default function Navbar() {
           </div>
         </Link>
 
-
         <section className="flex gap-2 lg:hidden">
           <ModeToggle />
           <Button
@@ -111,7 +110,7 @@ export default function Navbar() {
               ))}
 
               <li>
-                <Link href="/recruitment">
+                <Link href="/recruitment" onClick={() => setIsNavOpen(false)}>
                   <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-md transition hover:scale-105 hover:shadow-lg">
                     Join Us
                   </Button>
@@ -120,7 +119,6 @@ export default function Navbar() {
             </ul>
           </div>
         </section>
-
 
         <div className="hidden items-center gap-6 lg:flex">
           {routes.map((route) => (
