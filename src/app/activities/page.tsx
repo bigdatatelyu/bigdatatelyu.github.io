@@ -1,40 +1,12 @@
 "use client";
 
+import activities from "@/data/activities";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
-
-const activities = [
-  {
-    title: "Workshop Machine Learning",
-    date: "Juni 2025",
-    desc: "Pelajari dasar hingga lanjutan Machine Learning dengan praktek langsung.",
-  },
-  {
-    title: "Bootcamp Big Data Visualization",
-    date: "Mei 2025",
-    desc: "Intensif 5 hari membangun dashboard interaktif untuk data besar.",
-  },
-  {
-    title: "Seminar AI & Data Ethics",
-    date: "Maret 2025",
-    desc: "Diskusi mendalam tentang etika penggunaan AI dalam industri modern.",
-  },
-  {
-    title: "Hackathon Data Science",
-    date: "Februari 2025",
-    desc: "Kompetisi kolaboratif 48 jam membangun solusi berbasis data.",
-  },
-  {
-    title: "Guest Lecture: Future of AI",
-    date: "Januari 2025",
-    desc: "Kuliah tamu bersama pakar AI dari industri global.",
-  },
-];
 
 export default function ActivitiesPage() {
   return (
     <main className="mx-auto mt-20 max-w-6xl px-6 py-20">
-      {/* Hero */}
       <section className="text-center">
         <motion.h1
           variants={fadeUp}
@@ -57,9 +29,7 @@ export default function ActivitiesPage() {
         </motion.p>
       </section>
 
-      {/* Timeline */}
       <section className="relative mt-20">
-        {/* Line */}
         <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 rounded-full bg-gradient-to-b from-emerald-400 to-green-500 md:block" />
 
         <div className="space-y-12">
@@ -75,7 +45,6 @@ export default function ActivitiesPage() {
                 i % 2 === 0 ? "md:justify-start" : "md:justify-end"
               }`}
             >
-              {/* Content Card */}
               <div
                 className={`w-full md:w-1/2 ${
                   i % 2 === 0 ? "md:pr-12" : "md:pl-12"
@@ -94,7 +63,6 @@ export default function ActivitiesPage() {
                 </div>
               </div>
 
-              {/* Dot */}
               <span className="absolute left-1/2 top-6 hidden h-4 w-4 -translate-x-1/2 rounded-full border-4 border-white bg-emerald-500 shadow-md dark:border-slate-900 md:block" />
             </motion.div>
           ))}

@@ -5,34 +5,17 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import activities from "@/data/activities";
+
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-
-const activities = [
-  {
-    title: "Workshop Machine Learning",
-    date: "Juni 2025",
-    desc: "Pelajari dasar hingga lanjutan Machine Learning dengan praktek langsung.",
-  },
-  {
-    title: "Bootcamp Big Data Visualization",
-    date: "Mei 2025",
-    desc: "Intensif 5 hari membangun dashboard interaktif untuk data besar.",
-  },
-  {
-    title: "Seminar AI & Data Ethics",
-    date: "Maret 2025",
-    desc: "Diskusi mendalam tentang etika penggunaan AI dalam industri modern.",
-  },
-];
 
 export default function ActivitiesHighlight() {
   const router = useRouter();
 
   return (
     <section className="px-6">
-      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +26,6 @@ export default function ActivitiesHighlight() {
         Kegiatan Terbaru
       </motion.h2>
 
-      {/* Carousel */}
       <Carousel
         plugins={[Autoplay({ delay: 3500 })]}
         className="mx-auto max-w-4xl"

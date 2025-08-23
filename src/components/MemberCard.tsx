@@ -19,7 +19,7 @@ export default function MemberCard({ personnel, index = 0 }: Props) {
       whileHover={{ scale: 1.05 }}
       className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-700/40 bg-white/5 py-6 shadow-md backdrop-blur-sm transition-all hover:shadow-lg hover:shadow-emerald-500/20 dark:bg-slate-900/40"
     >
-      {/* children */}
+  
       <div className="flex flex-1 flex-col items-center">
         <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.3 }}>
           <Image

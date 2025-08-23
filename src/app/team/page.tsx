@@ -1,6 +1,6 @@
 "use client";
 
-import MemberCard from "@/components/member-card";
+import MemberCard from "@/components/MemberCard";
 import { members } from "@/data/our-teams";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";

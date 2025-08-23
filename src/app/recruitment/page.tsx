@@ -2,20 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import recruitmentResults from "@/data/recruitmentResults";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-
-const recruitmentResults: Record<string, "accepted" | "rejected" | "notfound"> =
-  {
-    "1": "accepted",
-    "2": "rejected",
-    "3": "accepted",
-    "4": "rejected",
-  };
 
 export default function RecruitmentPage() {
   const [nim, setNim] = useState("");

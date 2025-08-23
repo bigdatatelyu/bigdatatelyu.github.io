@@ -1,25 +1,13 @@
 "use client";
 
+import galleryItems from "@/data/galleryItems";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const galleryItems = [
-  { src: "/logos/placeholder.png", title: "Workshop ML 2025" },
-  { src: "/logos/placeholder.png", title: "Bootcamp Big Data" },
-  { src: "/logos/placeholder.png", title: "Seminar AI Ethics" },
-  { src: "/logos/placeholder.png", title: "Hackathon Data Science" },
-  { src: "/logos/placeholder.png", title: "Guest Lecture AI" },
-  { src: "/logos/placeholder.png", title: "Kolaborasi Riset" },
-  { src: "/logos/placeholder.png", title: "Team Discussion" },
-  { src: "/logos/placeholder.png", title: "Lab Activities" },
-  { src: "/logos/placeholder.png", title: "Innovation Showcase" },
-];
-
 export default function GalleryPage() {
   return (
     <main className="mx-auto mt-20 max-w-7xl px-6 py-20">
-      {/* Header */}
       <section className="text-center">
         <motion.h1
           variants={fadeUp}
@@ -42,7 +30,6 @@ export default function GalleryPage() {
         </motion.p>
       </section>
 
-      {/* Responsive Grid */}
       <section className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {galleryItems.map((item, i) => (
           <motion.div
@@ -61,7 +48,7 @@ export default function GalleryPage() {
               width={500}
               height={500}
             />
-            {/* Overlay */}
+
             <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition group-hover:opacity-100">
               <span className="px-3 pb-1 text-center text-lg font-semibold leading-snug text-white">
                 {item.title}

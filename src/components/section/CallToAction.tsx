@@ -2,11 +2,11 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function CallToAction() {
   return (
     <section className="px-6 text-center">
-      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,6 @@ export default function CallToAction() {
         Ingin Berkolaborasi?
       </motion.h2>
 
-      {/* Description */}
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -36,7 +35,6 @@ export default function CallToAction() {
         .
       </motion.p>
 
-      {/* Button */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -45,15 +43,15 @@ export default function CallToAction() {
         className="mt-6"
       >
         <motion.div whileHover={{ scale: 1.05 }}>
-          <a
-            href="https://instagram.com/bigdata.lab" 
+          <Link
+            href="https://instagram.com/bigdata.lab"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button className="mb-20 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 dark:from-emerald-400 dark:to-green-500">
               Hubungi Kami
             </Button>
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

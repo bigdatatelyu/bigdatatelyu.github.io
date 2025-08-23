@@ -8,7 +8,7 @@ import { twMerge } from "tailwind-merge";
 
 import routes from "@/data/routes";
 
-import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "./ModeToggle";
 import { Button } from "./ui/button";
 
 export default function Navbar() {

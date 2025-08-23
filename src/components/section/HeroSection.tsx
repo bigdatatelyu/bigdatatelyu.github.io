@@ -11,13 +11,6 @@ export default function HeroSection() {
     }
   };
 
-  const scrollToFooter = (): void => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section className="container mx-auto mt-20 flex flex-col items-center justify-center gap-6 px-6 py-20 md:flex-row md:gap-12 md:px-32">
       <div className="flex flex-col items-center text-center md:items-start md:text-left">
@@ -76,7 +69,6 @@ export default function HeroSection() {
           variants={fadeUp}
           className="mt-6 flex gap-4"
         >
-          {/* Tombol Learn More */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -86,7 +78,7 @@ export default function HeroSection() {
             Learn More
           </motion.button>
 
-          {/* Tombol Join Us */}
+          
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
