@@ -39,7 +39,7 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* mobile navigation */}
+
         <section className="flex gap-2 lg:hidden">
           <ModeToggle />
           <Button
@@ -109,7 +109,7 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
-              {/* ✅ Join Us button for mobile */}
+
               <li>
                 <Link href="/recruitment">
                   <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-md transition hover:scale-105 hover:shadow-lg">
@@ -121,7 +121,7 @@ export default function Navbar() {
           </div>
         </section>
 
-        {/* desktop navigation */}
+
         <div className="hidden items-center gap-6 lg:flex">
           {routes.map((route) => (
             <Link
@@ -135,7 +135,7 @@ export default function Navbar() {
               {route.name}
             </Link>
           ))}
-          {/* ✅ Join Us button for desktop */}
+
           <Link href="/recruitment">
             <Button className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 text-white shadow-md transition hover:scale-105 hover:shadow-lg">
               Join Us
