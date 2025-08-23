@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 export default function TeamPage() {
   return (
     <section className="container mx-auto my-20 md:px-32">
-      <div className="mb-10 text-center">
+      <div className="mb-10 mt-16 text-center">
         <motion.h1
-          className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-4xl font-extrabold text-transparent"
+          className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-4xl font-extrabold leading-tight text-transparent md:text-5xl"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
