@@ -2,31 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import projects from "@/data/projects";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-
-const projects = [
-  {
-    title: "Smart City Data Platform",
-    desc: "Membangun platform integrasi data untuk mendukung smart city berbasis IoT & Big Data.",
-  },
-  {
-    title: "AI Chatbot for Education",
-    desc: "Mengembangkan chatbot pintar untuk membantu mahasiswa dalam pembelajaran interaktif.",
-  },
-  {
-    title: "Big Data Analytics Dashboard",
-    desc: "Dashboard interaktif untuk visualisasi dan analisis data berskala besar.",
-  },
-];
 
 export default function ProjectsShowcase() {
   const router = useRouter();
 
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,9 +22,8 @@ export default function ProjectsShowcase() {
         Proyek Unggulan
       </motion.h2>
 
-      {/* Cards */}
       <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {projects.map((p, i) => (
+        {projects.slice(0, 3).map((p, i) => (
           <motion.div
             key={i}
             custom={i}
@@ -62,7 +46,6 @@ export default function ProjectsShowcase() {
         ))}
       </div>
 
-      {/* Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

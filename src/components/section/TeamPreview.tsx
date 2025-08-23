@@ -1,6 +1,6 @@
 "use client";
 
-import MemberCard from "@/components/member-card";
+import MemberCard from "@/components/MemberCard";
 import { members } from "@/data/our-teams";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
@@ -12,7 +12,6 @@ export default function TeamPreview() {
 
   return (
     <section className="container mx-auto my-20 md:px-32">
-      {/* Header */}
       <div className="mb-10 text-center">
         <motion.h1
           className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-4xl font-extrabold text-transparent"
@@ -49,7 +48,6 @@ export default function TeamPreview() {
         </motion.h3>
       </div>
 
-      {/* Grid Member Preview */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {latestEra.personnels.slice(0, 3).map((personnel, index) => (
           <motion.div
@@ -65,7 +63,6 @@ export default function TeamPreview() {
         ))}
       </div>
 
-      {/* Tombol Lihat Semua */}
       <div className="mt-10 flex justify-center">
         <motion.div
           variants={fadeUp}

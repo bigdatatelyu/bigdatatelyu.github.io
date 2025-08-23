@@ -1,15 +1,14 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import CallToAction from "@/components/section/CallToAction";
+import focusAreas from "@/data/focusAreas";
+import { mission, vision } from "@/data/visionMission";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
-import { BookOpen, Cpu, LineChart, Users } from "lucide-react";
-import Link from "next/link";
 
 export default function AboutPage() {
   return (
     <main className="relative mx-auto mt-20 max-w-6xl px-6 py-20">
-      {/* Hero Section */}
       <section className="text-center">
         <motion.h1
           variants={fadeUp}
@@ -37,7 +36,6 @@ export default function AboutPage() {
         </motion.p>
       </section>
 
-      {/* Visi & Misi */}
       <section className="mt-20 grid gap-10 md:grid-cols-2">
         <motion.div
           variants={fadeUp}
@@ -51,9 +49,7 @@ export default function AboutPage() {
             Visi
           </h2>
           <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-            Menjadi pusat unggulan dalam pengembangan teknologi data dan
-            komputasi, serta menghasilkan inovasi yang berdampak luas bagi
-            masyarakat dan industri.
+            {vision.text}
           </p>
         </motion.div>
         <motion.div
@@ -68,21 +64,13 @@ export default function AboutPage() {
             Misi
           </h2>
           <ul className="list-disc space-y-2 pl-5 leading-relaxed text-gray-700 dark:text-gray-300">
-            <li>
-              Mengembangkan penelitian inovatif di bidang data & komputasi.
-            </li>
-            <li>
-              Mendorong kolaborasi dengan industri, akademisi, dan masyarakat.
-            </li>
-            <li>
-              Membimbing mahasiswa untuk siap menghadapi tantangan teknologi.
-            </li>
-            <li>Menyediakan solusi nyata untuk permasalahan di dunia nyata.</li>
+            {mission.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </motion.div>
       </section>
 
-      {/* Research Area */}
       <section className="mt-24">
         <motion.h2
           variants={fadeUp}
@@ -94,29 +82,8 @@ export default function AboutPage() {
         >
           Bidang Fokus Kami
         </motion.h2>
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              icon: <Cpu className="h-8 w-8" />,
-              title: "Kecerdasan Buatan",
-              desc: "Penelitian AI & Machine Learning untuk solusi cerdas.",
-            },
-            {
-              icon: <LineChart className="h-8 w-8" />,
-              title: "Data Science",
-              desc: "Analisis data untuk menemukan pola dan insight baru.",
-            },
-            {
-              icon: <BookOpen className="h-8 w-8" />,
-              title: "Pembelajaran",
-              desc: "Mendukung pembelajaran mahasiswa melalui riset.",
-            },
-            {
-              icon: <Users className="h-8 w-8" />,
-              title: "Kolaborasi",
-              desc: "Bekerja sama dengan berbagai pihak dalam riset & pengembangan.",
-            },
-          ].map((item, idx) => (
+        <div className="mb-28 mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {focusAreas.map((item, idx) => (
             <motion.div
               key={idx}
               variants={fadeUp}
@@ -140,32 +107,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="mt-24 text-center">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={10}
-          className="pb-1 text-2xl font-bold leading-tight text-slate-800 dark:text-slate-200"
-        >
-          Tertarik untuk bergabung atau berkolaborasi?
-        </motion.h2>
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={11}
-        >
-          <Link href="/contact">
-            <Button className="mt-6 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 dark:from-emerald-400 dark:to-green-500">
-              Hubungi Kami
-            </Button>
-          </Link>
-        </motion.div>
-      </section>
+      <CallToAction />
     </main>
   );
 }

@@ -1,18 +1,11 @@
 "use client";
 
+import partners from "@/data/partners";
 import { motion } from "framer-motion";
-import { GraduationCap, Factory, Microscope } from "lucide-react";
-
-const partners = [
-  { name: "Telkom University", icon: GraduationCap },
-  { name: "Industry Partner", icon: Factory },
-  { name: "Research Partner", icon: Microscope },
-];
 
 export default function Partners() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
-      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +16,6 @@ export default function Partners() {
         Mitra & Kolaborasi
       </motion.h2>
 
-      {/* Icons */}
       <div className="flex flex-wrap justify-center gap-14">
         {partners.map((p, i) => (
           <motion.div

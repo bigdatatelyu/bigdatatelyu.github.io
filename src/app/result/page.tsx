@@ -10,7 +10,7 @@ export default function ResultPage() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const status = searchParams.get("status"); // "accepted" | "rejected"
+  const status = searchParams.get("status");
   const nim = searchParams.get("nim") || "";
 
   return (
