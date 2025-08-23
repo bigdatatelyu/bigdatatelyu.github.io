@@ -4,10 +4,10 @@ import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/section/Footer";
 import { ThemeProvider } from "@/components/theme-providers";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
-import Footer from "@/components/section/Footer";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
