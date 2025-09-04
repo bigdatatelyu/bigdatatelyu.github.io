@@ -12,6 +12,30 @@ const members: Member[] = [
     personnels: [
       {
         image: "/personnels/placeholder_profile.png",
+        name: "Sutan Rifky Tedjasukmana",
+        major: "Data Science '22",
+        description:
+          "Berfokus pada Generative AI untuk menghasilkan model kecerdasan buatan yang inovatif.",
+        positions: ["Laboratory Assistant", "Generative AI"],
+      },
+      {
+        image: "/personnels/placeholder_profile.png",
+        name: "Dito Adistya Wirawan",
+        major: "Data Science '22",
+        description:
+          "Berfokus pada Big Data Application untuk mendukung pemrosesan data dalam jumlah besar.",
+        positions: ["Laboratory Assistant", "Big Data Application"],
+      },
+      {
+        image: "/personnels/placeholder_profile.png",
+        name: "Hauzan Rafi Attallah",
+        major: "Data Science '22",
+        description:
+          "Berfokus pada Graph Database untuk analisis relasi kompleks antar data.",
+        positions: ["Laboratory Assistant", "Graph Database"],
+      },
+      {
+        image: "/personnels/placeholder_profile.png",
         name: "Gusti Raka Ananto",
         major: "Data Science '22",
         description:
@@ -25,14 +49,6 @@ const members: Member[] = [
         description:
           "Berfokus pada Document Oriented Database untuk pengelolaan data semi-terstruktur.",
         positions: ["Laboratory Assistant", "Document Oriented"],
-      },
-      {
-        image: "/personnels/placeholder_profile.png",
-        name: "Hauzan Rafi Attallah",
-        major: "Data Science '22",
-        description:
-          "Berfokus pada Graph Database untuk analisis relasi kompleks antar data.",
-        positions: ["Laboratory Assistant", "Graph Database"],
       },
       {
         image: "/personnels/placeholder_profile.png",
@@ -60,14 +76,6 @@ const members: Member[] = [
       },
       {
         image: "/personnels/placeholder_profile.png",
-        name: "Dito Adistya Wirawan",
-        major: "Data Science '22",
-        description:
-          "Berfokus pada Big Data Application untuk mendukung pemrosesan data dalam jumlah besar.",
-        positions: ["Laboratory Assistant", "Big Data Application"],
-      },
-      {
-        image: "/personnels/placeholder_profile.png",
         name: "Valentino Fredrick Albert Mamesah",
         major: "Data Science '22",
         description:
@@ -89,14 +97,6 @@ const members: Member[] = [
         description:
           "Berfokus pada Key Value Store sebagai solusi sederhana untuk kebutuhan akses data yang cepat.",
         positions: ["Laboratory Assistant", "Key Value"],
-      },
-      {
-        image: "/personnels/placeholder_profile.png",
-        name: "Sutan Rifky Tedjasukmana",
-        major: "Data Science '22",
-        description:
-          "Berfokus pada Generative AI untuk menghasilkan model kecerdasan buatan yang inovatif.",
-        positions: ["Laboratory Assistant", "Generative AI"],
       },
       {
         image: "/personnels/placeholder_profile.png",
