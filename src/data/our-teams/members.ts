@@ -1,97 +1,110 @@
-import { Member } from './types';
+import { Member } from "./types";
 
 const members: Member[] = [
-  // ==============
-  // 2023 Era
-  // ==============
   {
     year: 2023,
     images: [
-      '/collages/20231.png',
-      '/collages/20232.png',
-      '/collages/20233.png',
-      '/collages/20234.png',
+      "/collages/20231.png",
+      "/collages/20232.png",
+      "/collages/20233.png",
+      "/collages/20234.png",
     ],
     personnels: [
       {
-        image: '/personnels/placeholder.png',
-        name: 'Muhammad Khalid Habiburahman',
-        major: "Informatics '20",
+        image: "/personnels/placeholder_profile.png",
+        name: "Gusti Raka Ananto",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Laboratory Assistant', 'Big Data Application'],
+          "Berfokus pada Key Value Database sebagai sistem penyimpanan data yang cepat dan efisien.",
+        positions: ["Laboratory Assistant", "Key Value"],
       },
       {
-        image: '/personnels/placeholder.png',
-        name: 'Raihan Atsal Hafizh',
-        major: "Informatics '20",
+        image: "/personnels/placeholder_profile.png",
+        name: "Hanum Fadiannur",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Laboratory Assistant', 'Graph Database', 'Document Oriented Database'],
+          "Berfokus pada Document Oriented Database untuk pengelolaan data semi-terstruktur.",
+        positions: ["Laboratory Assistant", "Document Oriented"],
       },
       {
-        image: '/personnels/ariqheritsa.png',
-        name: 'Ariq Heritsa Maalik',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Hauzan Rafi Attallah",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Laboratory Assistant', 'Vector Database'],
+          "Berfokus pada Graph Database untuk analisis relasi kompleks antar data.",
+        positions: ["Laboratory Assistant", "Graph Database"],
       },
       {
-        image: '/personnels/adrianbadjideh.png',
-        name: 'Adrian Putra Pratama Badjideh',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Muhammad Arif Faisal",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Laboratory Assistant', 'Data Science Competition'],
+          "Berfokus pada Relational Database untuk manajemen data terstruktur berbasis relasi.",
+        positions: ["Laboratory Assistant", "Relational Database"],
       },
       {
-        image: '/personnels/placeholder.png',
-        name: 'Najma Zahira Layalia Marsyafathanya',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Aditya Budiami Putra",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Laboratory Assistant', 'Data Warehouse'],
+          "Berfokus pada Big Data Application untuk pengolahan dan analisis data berskala besar.",
+        positions: ["Laboratory Assistant", "Big Data Application"],
       },
       {
-        image: '/personnels/placeholder.png',
-        name: 'Putri Rizky Alifiya',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Ade Ikmal Maulana",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Laboratory Assistant', 'Relational Database'],
+          "Berfokus pada Data Warehouse untuk integrasi dan penyimpanan data dari berbagai sumber.",
+        positions: ["Laboratory Assistant", "Data Warehouse"],
       },
       {
-        image: '/personnels/nadyakhairani.png',
-        name: 'Nadya Khairani',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Dito Adistya Wirawan",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Graph Database', 'Document Oriented Database'],
+          "Berfokus pada Big Data Application untuk mendukung pemrosesan data dalam jumlah besar.",
+        positions: ["Laboratory Assistant", "Big Data Application"],
       },
       {
-        image: '/personnels/quinderbi.png',
-        name: 'Quin Derbi Kusuma',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Valentino Fredrick Albert Mamesah",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Graph Database', 'Key Value Store'],
+          "Berfokus pada Relational Database sebagai fondasi sistem manajemen data terstruktur.",
+        positions: ["Laboratory Assistant", "Relational Database"],
       },
       {
-        image: '/personnels/aliakbar.png',
-        name: 'Muhammad Ali Akbar Al-Qahri',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Fikri Fauzi",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['In Memory Database', 'Key Value Store'],
+          "Berfokus pada Data Warehouse untuk mendukung analitik data dan pengambilan keputusan.",
+        positions: ["Laboratory Assistant", "Data Warehouse"],
       },
       {
-        image: '/personnels/aqeelafathya.png',
-        name: 'Aqeela Fathya Najwa',
-        major: "Data Science '21",
+        image: "/personnels/placeholder_profile.png",
+        name: "Wanda Azizah",
+        major: "Data Science '22",
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. The quick brown fox jumps over the lazy dog.',
-        positions: ['Data Warehouse'],
+          "Berfokus pada Key Value Store sebagai solusi sederhana untuk kebutuhan akses data yang cepat.",
+        positions: ["Laboratory Assistant", "Key Value"],
+      },
+      {
+        image: "/personnels/placeholder_profile.png",
+        name: "Sutan Rifky Tedjasukmana",
+        major: "Data Science '22",
+        description:
+          "Berfokus pada Generative AI untuk menghasilkan model kecerdasan buatan yang inovatif.",
+        positions: ["Laboratory Assistant", "Generative AI"],
+      },
+      {
+        image: "/personnels/placeholder_profile.png",
+        name: "Afif Kurniawan Supriyadi",
+        major: "Data Science '22",
+        description:
+          "Berfokus pada Generative AI untuk eksplorasi teknologi kecerdasan buatan yang kreatif.",
+        positions: ["Laboratory Assistant", "Generative AI"],
       },
     ],
   },

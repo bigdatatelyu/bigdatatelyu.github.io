@@ -16,7 +16,7 @@ export default function TeamPage() {
           animate="visible"
           custom={0}
         >
-          Tim Kami
+          Our Team
         </motion.h1>
 
         <motion.h3
@@ -26,7 +26,7 @@ export default function TeamPage() {
           animate="visible"
           custom={1}
         >
-          Kumpulan anggota terbaik dari setiap generasi ✨
+          Dedicated members contributing to the growth and research of the Big Data Laboratory.
         </motion.h3>
       </div>
 
