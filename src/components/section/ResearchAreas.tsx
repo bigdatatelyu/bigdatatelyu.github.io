@@ -45,7 +45,6 @@ export default function ResearchAreas() {
                 flippedIndex === i ? "[transform:rotateY(180deg)]" : ""
               }`}
             >
-              
               <Card className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-slate-700/40 bg-white/5 p-8 text-center shadow-md backdrop-blur-sm transition [backface-visibility:hidden] hover:shadow-lg hover:shadow-emerald-500/20 dark:bg-slate-900/40">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/10">
                   <Icon className="h-10 w-10 text-emerald-400" />
@@ -55,7 +54,6 @@ export default function ResearchAreas() {
                 </p>
               </Card>
 
-              
               <Card className="absolute inset-0 flex items-center justify-center rounded-2xl border border-emerald-600/20 bg-emerald-500/10 p-6 text-center shadow-md backdrop-blur-sm [backface-visibility:hidden] [transform:rotateY(180deg)] dark:border-emerald-400/20 dark:bg-emerald-400/10">
                 <p className="max-w-[28ch] text-sm leading-relaxed text-slate-800 dark:text-gray-200">
                   {description}
