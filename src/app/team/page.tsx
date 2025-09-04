@@ -26,7 +26,8 @@ export default function TeamPage() {
           animate="visible"
           custom={1}
         >
-          Kumpulan anggota terbaik dari setiap generasi ✨
+          Anggota yang berdedikasi dalam mendukung riset, inovasi, dan
+          pengembangan di Laboratorium Big Data.
         </motion.h3>
       </div>
 

@@ -30,14 +30,21 @@ export default function AboutPreview() {
         variants={fadeUp}
         className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-700 dark:text-gray-200"
       >
-        Laboratorium ini berfokus pada pengembangan, penelitian, dan penerapan
-        teknologi terkini di bidang data dan komputasi. Melalui berbagai
-        kegiatan riset dan kolaborasi, lab berperan sebagai wadah untuk inovasi,
-        pembelajaran, dan kontribusi nyata dalam perkembangan ilmu pengetahuan
-        serta pemecahan masalah di dunia nyata.
-        <br />
+        Big Data Laboratory merupakan laboratorium riset di bawah Fakultas
+        Informatika Telkom University, bernaung dalam divisi Data Science and
+        Intelligent Systems (DSIS). Sejak berdiri pada tahun 1991/1992,
+        laboratorium ini menjadi pusat pembelajaran, riset, serta penerapan
+        praktis di bidang{" "}
         <span className="font-semibold text-emerald-500 dark:text-emerald-400">
-          Kenali lab kami lebih lanjut melalui halaman berikut.
+          big data
+        </span>
+        .
+        <br />
+        <br />
+        Kegiatan lab mencakup kelompok studi, kompetisi data science, proyek
+        penelitian, dan pengolahan data nyata.
+        <span className="font-semibold text-emerald-500 dark:text-emerald-400">
+          Kenali lebih lanjut melalui halaman berikut.
         </span>
       </motion.p>
 
