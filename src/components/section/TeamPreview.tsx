@@ -32,19 +32,8 @@ export default function TeamPreview() {
           viewport={{ once: true }}
           custom={1}
         >
-          Temui{" "}
-          <strong className="text-emerald-500 dark:text-emerald-400">
-            anggota terbaik kami
-          </strong>{" "}
-          yang menjunjung tinggi{" "}
-          <strong className="text-emerald-500 dark:text-emerald-400">
-            integritas
-          </strong>{" "}
-          serta membangun budaya{" "}
-          <strong className="text-emerald-500 dark:text-emerald-400">
-            keunggulan
-          </strong>{" "}
-          bersama.
+          Anggota yang berdedikasi dalam mendukung riset, inovasi, 
+          dan pengembangan di Laboratorium Big Data.
         </motion.h3>
       </div>
 
