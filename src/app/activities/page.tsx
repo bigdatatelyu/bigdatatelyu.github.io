@@ -15,7 +15,7 @@ export default function ActivitiesPage() {
           custom={0}
           className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-4xl font-extrabold leading-tight text-transparent md:text-5xl"
         >
-          Kegiatan & Acara
+          Recruitment Timeline
         </motion.h1>
         <motion.p
           variants={fadeUp}
@@ -24,8 +24,9 @@ export default function ActivitiesPage() {
           custom={1}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300"
         >
-          Rangkaian workshop, seminar, bootcamp, dan acara menarik yang menjadi
-          wadah pembelajaran, kolaborasi, dan inovasi di bidang data & AI.
+          Berikut adalah rangkaian tahapan Open Recruitment, mulai dari
+          pengumpulan berkas hingga pengumuman akhir. Pastikan kamu mengikuti
+          setiap tahap dengan baik untuk menjadi bagian dari perjalanan ini.
         </motion.p>
       </section>
 

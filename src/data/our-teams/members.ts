@@ -13,7 +13,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Sutan Rifky Tedjasukmana",
-        major: "Data Science '22",
+        major: "Informatics '22",
         description:
           "Berfokus pada Generative AI untuk menghasilkan model kecerdasan buatan yang inovatif.",
         positions: ["Laboratory Assistant", "Generative AI"],
@@ -29,7 +29,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Hauzan Rafi Attallah",
-        major: "Data Science '22",
+        major: "Data Science '23",
         description:
           "Berfokus pada Graph Database untuk analisis relasi kompleks antar data.",
         positions: ["Laboratory Assistant", "Graph Database"],
@@ -37,7 +37,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Gusti Raka Ananto",
-        major: "Data Science '22",
+        major: "Informatics '22",
         description:
           "Berfokus pada Key Value Database sebagai sistem penyimpanan data yang cepat dan efisien.",
         positions: ["Laboratory Assistant", "Key Value"],
@@ -69,7 +69,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Ade Ikmal Maulana",
-        major: "Data Science '22",
+        major: "Informatics '22",
         description:
           "Berfokus pada Data Warehouse untuk integrasi dan penyimpanan data dari berbagai sumber.",
         positions: ["Laboratory Assistant", "Data Warehouse"],
@@ -85,7 +85,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Fikri Fauzi",
-        major: "Data Science '22",
+        major: "Informatics '22",
         description:
           "Berfokus pada Data Warehouse untuk mendukung analitik data dan pengambilan keputusan.",
         positions: ["Laboratory Assistant", "Data Warehouse"],
@@ -101,7 +101,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Afif Kurniawan Supriyadi",
-        major: "Data Science '22",
+        major: "Informatics '22",
         description:
           "Berfokus pada Generative AI untuk eksplorasi teknologi kecerdasan buatan yang kreatif.",
         positions: ["Laboratory Assistant", "Generative AI"],

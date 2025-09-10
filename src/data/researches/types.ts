@@ -1,4 +1,4 @@
-export type Research = {
+export type Achievements = {
   year: number;
   title: string;
   authors: string[];

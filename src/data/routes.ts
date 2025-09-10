@@ -13,8 +13,8 @@ const routes: Route[] = [
     name: "About",
   },
   {
-    path: "/research",
-    name: "Research",
+    path: "/achievements",
+    name: "Achievements",
   },
   {
     path: "/activities",
