@@ -6,6 +6,7 @@ import recruitmentResults from "@/data/recruitmentResults";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -19,7 +20,7 @@ export default function RecruitmentPage() {
     if (isToastVisible) return;
     setIsToastVisible(true);
     fn();
-    setTimeout(() => setIsToastVisible(false), 2500); // ⏳ reset setelah 2.5s
+    setTimeout(() => setIsToastVisible(false), 2500);
   };
 
   const handleSearch = () => {
@@ -79,7 +80,6 @@ export default function RecruitmentPage() {
 
   return (
     <main className="mx-auto my-20 max-w-5xl px-6 py-20">
-      {/* Section 1 - Info Pendaftaran */}
       <section className="mb-24 text-center">
         <motion.h1
           variants={fadeUp}
@@ -107,8 +107,8 @@ export default function RecruitmentPage() {
           custom={2}
           className="mt-10"
         >
-          <a
-            href="https://instagram.com/your_lab_account"
+          <Link
+            href="https://instagram.com/bigdata.lab"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -116,20 +116,17 @@ export default function RecruitmentPage() {
               Selengkapnya
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
-          </a>
+          </Link>
         </motion.div>
       </section>
 
-      {/* Section 2 - Cek Hasil Recruitment */}
       <section>
         <motion.h2
           variants={fadeUp}
           initial="hidden"
           animate="visible"
           custom={0}
-          className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text 
-             text-center text-3xl font-extrabold tracking-tight text-transparent 
-             md:text-4xl"
+          className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-center text-3xl font-extrabold tracking-tight text-transparent md:text-4xl"
         >
           Cek Hasil Recruitment
         </motion.h2>
@@ -145,7 +142,6 @@ export default function RecruitmentPage() {
           kamu untuk mengetahui hasil seleksi recruitment.
         </motion.p>
 
-        {/* Input + Button */}
         <motion.div
           variants={fadeUp}
           initial="hidden"

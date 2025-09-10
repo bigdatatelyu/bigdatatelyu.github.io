@@ -2,29 +2,24 @@ import { Activity } from "./types";
 
 const activities: Activity[] = [
   {
-    title: "Workshop Machine Learning",
-    date: "Juni 2025",
-    desc: "Pelajari dasar hingga lanjutan Machine Learning dengan praktek langsung.",
+    title: "Form & Document Submission",
+    date: "12–17 September 2025",
+    desc: "Pengumpulan formulir dan dokumen sebagai tahap awal pendaftaran.",
   },
   {
-    title: "Bootcamp Big Data Visualization",
-    date: "Mei 2025",
-    desc: "Intensif 5 hari membangun dashboard interaktif untuk data besar.",
+    title: "Written Test",
+    date: "22–23 September 2025",
+    desc: "Tes tertulis untuk mengukur pengetahuan dan kemampuan peserta.",
   },
   {
-    title: "Seminar AI & Data Ethics",
-    date: "Maret 2025",
-    desc: "Diskusi mendalam tentang etika penggunaan AI dalam industri modern.",
+    title: "Interview",
+    date: "24–25 September 2025",
+    desc: "Sesi wawancara untuk mengenal lebih dalam motivasi dan potensi peserta.",
   },
   {
-    title: "Hackathon Data Science",
-    date: "Februari 2025",
-    desc: "Kompetisi kolaboratif 48 jam membangun solusi berbasis data.",
-  },
-  {
-    title: "Guest Lecture: Future of AI",
-    date: "Januari 2025",
-    desc: "Kuliah tamu bersama pakar AI dari industri global.",
+    title: "Final Announcement",
+    date: "30 September 2025",
+    desc: "Pengumuman akhir hasil seleksi peserta yang lolos.",
   },
 ];
 

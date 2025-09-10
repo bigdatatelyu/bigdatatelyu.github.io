@@ -77,10 +77,10 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/research"
+                href="/achievements"
                 className="text-neutral-700 transition-colors hover:text-green-600 dark:text-neutral-300"
               >
-                Research
+                Achievements
               </Link>
             </li>
             <li>

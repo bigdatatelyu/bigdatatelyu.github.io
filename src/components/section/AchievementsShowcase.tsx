@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import projects from "@/data/projects";
+import achievements from "@/data/achievements";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-export default function ProjectsShowcase() {
+export default function AchievementsShowcase() {
   const router = useRouter();
 
   return (
@@ -19,11 +19,11 @@ export default function ProjectsShowcase() {
         viewport={{ once: true }}
         className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text pb-2 text-center text-3xl font-extrabold leading-tight text-transparent md:text-4xl"
       >
-        Proyek Unggulan
+        Prestasi & Proyek Unggulan
       </motion.h2>
 
       <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {projects.slice(0, 3).map((p, i) => (
+        {achievements.slice(0, 3).map((p, i) => (
           <motion.div
             key={i}
             custom={i}
@@ -55,10 +55,10 @@ export default function ProjectsShowcase() {
       >
         <motion.div whileHover={{ scale: 1.0 }}>
           <Button
-            onClick={() => router.push("/research")}
+            onClick={() => router.push("/achievements")}
             className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-8 py-3 text-white shadow-lg transition hover:scale-105 dark:from-emerald-400 dark:to-green-500"
           >
-            Lihat Semua Proyek
+            Lihat Semua
           </Button>
         </motion.div>
       </motion.div>
