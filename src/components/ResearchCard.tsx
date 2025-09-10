@@ -1,4 +1,5 @@
-import { Achievements } from "@/data/achievementses/types";
+import { Achievements } from "@/data/researches/types";
+
 
 type Props = {
   achievements: Achievements;
