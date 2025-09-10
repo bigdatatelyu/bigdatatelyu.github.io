@@ -3,7 +3,7 @@ import { Activity } from "./types";
 const activities: Activity[] = [
   {
     title: "Form & Document Submission",
-    date: "12–17 September 2025",
+    date: "11–17 September 2025",
     desc: "Pengumpulan formulir dan dokumen sebagai tahap awal pendaftaran.",
   },
   {
@@ -13,12 +13,12 @@ const activities: Activity[] = [
   },
   {
     title: "Interview",
-    date: "24–25 September 2025",
+    date: "29–30 September 2025",
     desc: "Sesi wawancara untuk mengenal lebih dalam motivasi dan potensi peserta.",
   },
   {
     title: "Final Announcement",
-    date: "30 September 2025",
+    date: "6 Oktober 2025",
     desc: "Pengumuman akhir hasil seleksi peserta yang lolos.",
   },
 ];
