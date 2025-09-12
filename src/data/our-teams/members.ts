@@ -45,7 +45,7 @@ const members: Member[] = [
       {
         image: "/personnels/placeholder_profile.png",
         name: "Hanum Fadiannur",
-        major: "Data Science '22",
+        major: "Informatics '22",
         description:
           "Berfokus pada Document Oriented Database untuk pengelolaan data semi-terstruktur.",
         positions: ["Laboratory Assistant", "Document Oriented"],
