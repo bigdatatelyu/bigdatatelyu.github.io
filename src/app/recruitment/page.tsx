@@ -55,7 +55,6 @@ export default function RecruitmentPage() {
       return;
     }
 
-    // Validasi nama (case-insensitive dan trim whitespace)
     const normalizedInputName = name.trim().toLowerCase();
     const normalizedDataName = result.name.toLowerCase();
 
@@ -73,7 +72,6 @@ export default function RecruitmentPage() {
       return;
     }
 
-    // Generate token untuk validasi halaman result
     const token = btoa(`${nim}:${result.name}:${result.status}`);
 
     if (result.status === "accepted") {
@@ -164,7 +162,8 @@ export default function RecruitmentPage() {
           className="mx-auto mt-4 max-w-xl text-center text-slate-600 dark:text-slate-400"
         >
           Masukkan <span className="font-semibold text-emerald-500">NIM</span>{" "}
-          dan <span className="font-semibold text-emerald-500">Nama Lengkap</span>{" "}
+          dan{" "}
+          <span className="font-semibold text-emerald-500">Nama Lengkap</span>{" "}
           kamu untuk mengetahui hasil seleksi recruitment.
         </motion.p>
 

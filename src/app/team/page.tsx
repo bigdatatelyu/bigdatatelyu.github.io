@@ -34,7 +34,6 @@ export default function TeamPage() {
       <div className="space-y-20">
         {members.map((era, eraIndex) => (
           <div key={eraIndex}>
-            {/* Grid per era */}
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {era.personnels.map((personnel, index) => (
                 <motion.div

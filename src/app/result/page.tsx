@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import recruitmentResults from "@/data/recruitmentResults";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";
-import { CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
+import { AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -25,11 +25,9 @@ export default function ResultPage() {
     }
 
     try {
-      // Decode token
       const decoded = atob(token);
       const [tokenNim, tokenName, tokenStatus] = decoded.split(":");
 
-      // Validasi dengan data asli
       const result = recruitmentResults[tokenNim];
 
       if (
@@ -37,18 +35,15 @@ export default function ResultPage() {
         result.name !== tokenName ||
         result.status !== tokenStatus
       ) {
-        // Token tidak valid, redirect ke halaman recruitment
         router.push("/recruitment");
         return;
       }
 
-      // Token valid
       setIsValid(true);
       setNim(tokenNim);
       setName(tokenName);
       setStatus(result.status as "accepted" | "rejected");
     } catch (error) {
-      // Error decoding token
       router.push("/recruitment");
     }
   }, [searchParams, router]);
@@ -95,9 +90,10 @@ export default function ResultPage() {
             custom={2}
             className="mt-4 text-lg text-slate-600 dark:text-slate-300"
           >
-            <span className="font-semibold">{name}</span> (NIM: {nim}) dinyatakan{" "}
-            <span className="font-bold text-emerald-500">LULUS</span> seleksi!
-            Bergabunglah dengan grup WhatsApp resmi untuk informasi selanjutnya.
+            <span className="font-semibold">{name}</span> (NIM: {nim})
+            dinyatakan <span className="font-bold text-emerald-500">LULUS</span>{" "}
+            seleksi! Bergabunglah dengan grup WhatsApp resmi untuk informasi
+            selanjutnya.
           </motion.p>
           <motion.div
             variants={fadeUp}
@@ -143,7 +139,7 @@ export default function ResultPage() {
             className="text-4xl font-extrabold md:text-5xl"
           >
             <span className="bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-transparent">
-              Nice Try
+              Tetap Semangat
             </span>{" "}
             🙏
           </motion.h1>
@@ -155,8 +151,9 @@ export default function ResultPage() {
             custom={2}
             className="mt-4 text-lg text-slate-600 dark:text-slate-300"
           >
-            <span className="font-semibold">{name}</span> (NIM: {nim}) belum berhasil kali
-            ini. Tetap semangat, masih banyak kesempatan hebat menanti 🚀
+            <span className="font-semibold">{name}</span> (NIM: {nim}) belum
+            berhasil kali ini. Tetap semangat, masih banyak kesempatan hebat
+            menanti 🚀
           </motion.p>
           <motion.div
             variants={fadeUp}
