@@ -1,7 +1,7 @@
 "use client";
 
 import CallToAction from "@/components/section/CallToAction";
-import focusAreas from "@/data/focusAreas";
+import focusAreas from "@/data/galleryItems/focusAreas";
 import { mission, vision } from "@/data/visionMission";
 import { fadeUp } from "@/lib/motionVariants";
 import { motion } from "framer-motion";

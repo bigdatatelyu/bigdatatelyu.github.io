@@ -13,6 +13,7 @@ import { toast } from "sonner";
 
 export default function RecruitmentPage() {
   const [nim, setNim] = useState("");
+  const [name, setName] = useState("");
   const [isToastVisible, setIsToastVisible] = useState(false);
   const router = useRouter();
 
@@ -24,9 +25,9 @@ export default function RecruitmentPage() {
   };
 
   const handleSearch = () => {
-    if (!nim.trim()) {
+    if (!nim.trim() || !name.trim()) {
       showToast(() =>
-        toast.error("Silakan masukkan NIM terlebih dahulu.", {
+        toast.error("Silakan masukkan NIM dan Nama terlebih dahulu.", {
           position: "top-right",
           style: {
             background: "#fee2e2",
@@ -40,31 +41,7 @@ export default function RecruitmentPage() {
 
     const result = recruitmentResults[nim];
 
-    if (result === "accepted") {
-      showToast(() =>
-        toast.success(`Selamat! NIM ${nim} dinyatakan LULUS seleksi.`, {
-          position: "top-right",
-          style: {
-            background: "#dcfce7",
-            color: "#166534",
-            fontWeight: 600,
-          },
-        })
-      );
-      router.push(`/result?status=accepted&nim=${nim}`);
-    } else if (result === "rejected") {
-      showToast(() =>
-        toast.error(`Mohon maaf, NIM ${nim} dinyatakan TIDAK LULUS.`, {
-          position: "top-right",
-          style: {
-            background: "#fee2e2",
-            color: "#b91c1c",
-            fontWeight: 600,
-          },
-        })
-      );
-      router.push(`/result?status=rejected&nim=${nim}`);
-    } else {
+    if (!result) {
       showToast(() =>
         toast.warning(`NIM ${nim} tidak ditemukan.`, {
           position: "top-right",
@@ -75,6 +52,54 @@ export default function RecruitmentPage() {
           },
         })
       );
+      return;
+    }
+
+    // Validasi nama (case-insensitive dan trim whitespace)
+    const normalizedInputName = name.trim().toLowerCase();
+    const normalizedDataName = result.name.toLowerCase();
+
+    if (normalizedInputName !== normalizedDataName) {
+      showToast(() =>
+        toast.error("Nama tidak sesuai dengan data NIM.", {
+          position: "top-right",
+          style: {
+            background: "#fee2e2",
+            color: "#b91c1c",
+            fontWeight: 600,
+          },
+        })
+      );
+      return;
+    }
+
+    // Generate token untuk validasi halaman result
+    const token = btoa(`${nim}:${result.name}:${result.status}`);
+
+    if (result.status === "accepted") {
+      showToast(() =>
+        toast.success(`Selamat! ${result.name} dinyatakan LULUS seleksi.`, {
+          position: "top-right",
+          style: {
+            background: "#dcfce7",
+            color: "#166534",
+            fontWeight: 600,
+          },
+        })
+      );
+      router.push(`/result?token=${token}`);
+    } else if (result.status === "rejected") {
+      showToast(() =>
+        toast.error(`Mohon maaf, ${result.name} dinyatakan TIDAK LULUS.`, {
+          position: "top-right",
+          style: {
+            background: "#fee2e2",
+            color: "#b91c1c",
+            fontWeight: 600,
+          },
+        })
+      );
+      router.push(`/result?token=${token}`);
     }
   };
 
@@ -139,6 +164,7 @@ export default function RecruitmentPage() {
           className="mx-auto mt-4 max-w-xl text-center text-slate-600 dark:text-slate-400"
         >
           Masukkan <span className="font-semibold text-emerald-500">NIM</span>{" "}
+          dan <span className="font-semibold text-emerald-500">Nama Lengkap</span>{" "}
           kamu untuk mengetahui hasil seleksi recruitment.
         </motion.p>
 
@@ -147,7 +173,7 @@ export default function RecruitmentPage() {
           initial="hidden"
           animate="visible"
           custom={2}
-          className="mx-auto mt-10 flex max-w-md items-center gap-3"
+          className="mx-auto mt-10 max-w-md space-y-4"
         >
           <Input
             placeholder="Masukkan NIM..."
@@ -155,10 +181,16 @@ export default function RecruitmentPage() {
             onChange={(e) => setNim(e.target.value)}
             className="rounded-xl border-slate-300 bg-white shadow-sm transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500 dark:border-slate-700 dark:bg-slate-800"
           />
+          <Input
+            placeholder="Masukkan Nama Lengkap..."
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="rounded-xl border-slate-300 bg-white shadow-sm transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500 dark:border-slate-700 dark:bg-slate-800"
+          />
           <Button
             onClick={handleSearch}
             disabled={isToastVisible}
-            className="rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 text-white shadow-md transition hover:scale-105 hover:shadow-xl disabled:opacity-50 dark:from-emerald-400 dark:to-green-500"
+            className="w-full rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 px-6 text-white shadow-md transition hover:scale-105 hover:shadow-xl disabled:opacity-50 dark:from-emerald-400 dark:to-green-500"
           >
             Cari
           </Button>

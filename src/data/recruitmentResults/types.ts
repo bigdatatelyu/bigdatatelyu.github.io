@@ -1,3 +1,8 @@
-export type RecruitmentStatus = "accepted" | "rejected" | "notfound";
+export type RecruitmentStatus = "accepted" | "rejected";
 
-export type RecruitmentResults = Record<string, RecruitmentStatus>;
+export interface RecruitmentData {
+  name: string;
+  status: RecruitmentStatus;
+}
+
+export type RecruitmentResults = Record<string, RecruitmentData>;
