@@ -103,7 +103,7 @@ export default function ResultPage() {
             className="mt-10 flex gap-4"
           >
             <a
-              href="https://chat.whatsapp.com/your-wa-group"
+              href="https://chat.whatsapp.com/D8vjflMeKXULdzpuZPHKEl"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -141,7 +141,7 @@ export default function ResultPage() {
             <span className="bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-transparent">
               Tetap Semangat
             </span>{" "}
-            🙏
+            💪
           </motion.h1>
 
           <motion.p
@@ -151,9 +151,10 @@ export default function ResultPage() {
             custom={2}
             className="mt-4 text-lg text-slate-600 dark:text-slate-300"
           >
-            <span className="font-semibold">{name}</span> (NIM: {nim}) belum
-            berhasil kali ini. Tetap semangat, masih banyak kesempatan hebat
-            menanti 🚀
+            Terima kasih <span className="font-semibold">{name}</span> (NIM:{" "}
+            {nim}) telah mengikuti proses seleksi dengan baik. Meskipun belum
+            berhasil kali ini, jangan menyerah! Masih banyak peluang dan
+            kesempatan luar biasa yang menanti di depan 🌟
           </motion.p>
           <motion.div
             variants={fadeUp}
