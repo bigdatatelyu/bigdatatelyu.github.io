@@ -103,7 +103,7 @@ export default function ResultPage() {
             className="mt-10 flex gap-4"
           >
             <a
-              href="https://chat.whatsapp.com/D8vjflMeKXULdzpuZPHKEl"
+              href="https://chat.whatsapp.com/JsGoRfqgT21IGYEfffvJCt"
               target="_blank"
               rel="noopener noreferrer"
             >
